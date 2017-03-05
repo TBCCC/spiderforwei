@@ -53,8 +53,6 @@ def get_post_data():
     __EVENTVALIDATION = re.findall(
         get_EVENTVALIDATION_pattern, page)[0]
 
-    # return __VIEWSTATEGENERATOR, __VIEWSTATEENCRYPTED, __VIEWSTATE,
-    # __EVENTVALIDATION
     data = {
         "Button1": "查询",
         "TextBox1": namenum,
