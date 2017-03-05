@@ -81,7 +81,12 @@ def clear_data(read):
             r'<span id="DataList1_ctl00_ksnyLabel">(.*?)<')
         time = re.findall(
             get_time_pattern, read)[0]
+        get_name_pattern = re.compile(
+            r'<span id="DataList1_ctl00_xmLabel">(.*?)<')
+        name = re.findall(
+            get_name_pattern, read)[0]
         print "准考证号：%s" % num
+        print "学生姓名：%s" % name
         print "身份证号：%s" % idcard
         print "考试时间：%s" % time
     except IndexError as e:
